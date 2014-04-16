@@ -135,6 +135,8 @@
 							    <jsSourceFile>libs/mustache.js</jsSourceFile>
 							    <jsSourceFile>libs/moment.min.js</jsSourceFile>
 							    <jsSourceFile>libs/sorttable.js</jsSourceFile>
+							    <jsSourceFile>libs/wps-js.1.0.0-SNAPSHOT.js</jsSourceFile>
+							    <jsSourceFile>libs/OpenLayers.js</jsSourceFile>
 							    <jsSourceFile>models/timeseries.js</jsSourceFile>
 							    <jsSourceFile>models/referenceValue.js</jsSourceFile>
 							    <jsSourceFile>models/tsStyle.js</jsSourceFile>

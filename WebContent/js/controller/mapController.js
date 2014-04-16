@@ -38,6 +38,283 @@ var Map = {
 			$('[data-action="locate"]').click(function() {
 				Map.locateUser();
 			});
+			// SOMAP2014 ////////
+			$.wpsSetup({
+				proxy : {
+					url : "/wps_proxy/wps_proxy?url=",
+					type : "parameter"
+				},
+				configuration : {
+					url : "http://192.168.1.136:8080/wps/WebProcessingService"
+				}
+			});
+			$('[data-action="wps"]').click(function() {
+				debugger;
+				Modal.show('wps');
+				var formBuilder = new FormBuilder();
+				formBuilder.clearForm($('#wps-form'));
+				var hidden = false;
+				formBuilder.buildExecuteForm($('#wps-form'), {
+					"processVersion" : "1.0",
+					"statusSupported" : true,
+					"storeSupported" : true,
+					"identifier" : "org.n52.wps.server.r.demo.interpolation.jsclient",
+//					"title" : "GECA-Intercomparison",
+//					"abstract" : "GECA Satellite Data Intercomparison.",
+					"dataInputs" : [
+							{
+								"maxOccurs" : 1,
+								"minOccurs" : 1,
+								"identifier" : "data",
+								"title" : "Data",
+//								"abstract" : "The first dataset for the intercomparison",
+								"complexData" : {
+									"default" : {
+										"formats" : [ {
+											"mimeType" : "application/json"
+//											"schema" : "http://schema.geoviqua.org/geca/0.1/resolvableDataset.xsd"
+										} ]
+									},
+									"supported" : {
+										"formats" : [ {
+											"mimeType" : "application/json"
+//											"schema" : "http://schema.geoviqua.org/geca/0.1/resolvableDataset.xsd"
+										} ]
+									}
+								},
+								"predefinedValue": JSON.stringify({
+									"values": [
+									   		{
+									   			"coords": [
+									   				7.2044419705086735,
+									   				51.266086785330224
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1371064950000,
+									   				"value": 20.3
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.365665095102475,
+									   				51.14334954184367
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1371064050000,
+									   				"value": 19.6
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.100552165082708,
+									   				51.087732979584395
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1370921850000,
+									   				"value": 10
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.320281676860971,
+									   				51.22548556899834
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372980150000,
+									   				"value": 16.1
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.40096795458942,
+									   				51.17103846368366
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372720950000,
+									   				"value": 13.1
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.0602992201626185,
+									   				51.0966135017852
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372979250000,
+									   				"value": 16.7
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.107294690952992,
+									   				51.225894610660866
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1371065850000,
+									   				"value": 21.4
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.299968716891246,
+									   				51.200402890202945
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372994550000,
+									   				"value": 15.8
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.186580962308821,
+									   				51.06958203108305
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372909500000,
+									   				"value": 13.9
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.530828579490191,
+									   				51.09836102312226
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379323350000,
+									   				"value": 9.9
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.179744487634198,
+									   				51.06765508608393
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372923450000,
+									   				"value": 16.1
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.399410121794452,
+									   				51.17167137941307
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379324250000,
+									   				"value": 11.5
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.283090752705482,
+									   				51.090121367969026
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372995450000,
+									   				"value": 15.3
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.184148868629406,
+									   				51.218726535948775
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379326950000,
+									   				"value": 10
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.226317896922862,
+									   				51.19657532705112
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372908600000,
+									   				"value": 14.1
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.430406594086035,
+									   				51.13625558025584
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1372981950000,
+									   				"value": 15.5
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.305941659811078,
+									   				51.063698821453556
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379327400000,
+									   				"value": 11.4
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.239976260754382,
+									   				51.075121231895494
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379247750000,
+									   				"value": 14.3
+									   			}
+									   		},
+									   		{
+									   			"coords": [
+									   				7.557398313117449,
+									   				51.08136930185558
+									   			],
+									   			"lastValue": {
+									   				"timestamp": 1379320650000,
+									   				"value": 9.7
+									   			}
+									   		}
+									   	],
+									   	"phenomenon": "3",
+									   	"bounds": {
+									   		"_southWest": {
+									   			"lat": 50.77033932897995,
+									   			"lng": 6.87744140625
+									   		},
+									   		"_northEast": {
+									   			"lat": 51.55572834577049,
+									   			"lng": 7.738494873046875
+									   		}
+									   	},
+									   	"pixelBounds": {
+									   		"min": {
+									   			"x": 136080,
+									   			"y": 87113
+									   		},
+									   		"max": {
+									   			"x": 136707,
+									   			"y": 88025
+									   		}
+									   	}
+									   }),
+								"hidden" : hidden
+							}],
+					"processOutputs" : [ {
+						"identifier" : "image",
+						"title" : "Report",
+						"abstract" : "The intercomparison report",
+						"selected" : true
+					},
+					{
+						"identifier" : "imageBounds",
+						"title" : "Report",
+						"abstract" : "The intercomparison report",
+						"selected" : true
+					}]
+					// TODO define correct processOutputs!
+				}, execute);
+			});
+			// SOMAP2014 ////////
 		});
 		this.loadStations();
 		EventManager.subscribe("resetStatus", $.proxy(this.loadStations, this));
@@ -143,6 +420,8 @@ var Map = {
 	},
 	
 	createColoredMarkers : function(results) {
+		this.json = {};
+		this.json.values = [];
 		if (this.stationMarkers != null) {
 			this.map.removeLayer(this.stationMarkers);
 		}
@@ -170,6 +449,10 @@ var Map = {
 						bottommost = geom[1];
 					}
 					var marker;
+					this.json.values.push({
+						coords: elem.getCoordinates(),
+						lastValue: elem.getLastValue() 
+					});
 					if (elem.isCurrent()) {
 						var interval = this.getMatchingInterval(elem);
 						var fillcolor = interval && interval.color ? interval.color : Settings.defaultMarkerColor;
@@ -195,6 +478,9 @@ var Map = {
 					[ parseFloat(bottommost), parseFloat(leftmost) ],
 					[ parseFloat(topmost), parseFloat(rightmost) ] ]);
 		}
+		this.json['phenomenon'] = Map.selectedPhenomenon;
+		this.json['bounds'] = this.map.getBounds();
+		this.json['pixelBounds'] = this.map.getPixelBounds();
 	},
 	
 	getMatchingInterval : function(elem) {
