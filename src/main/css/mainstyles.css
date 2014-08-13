@@ -72,7 +72,7 @@ body,html,.container,.row-offcanvas,.mainPanel {
 
 .content {
     height: 100%;
-    padding-top: 53px;
+    padding-top: 70px;
 }
 
 .leftPanelButton {
@@ -122,3 +122,37 @@ body,html,.container,.row-offcanvas,.mainPanel {
 @-ms-viewport       { width: device-width; }
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
+
+
+/* logos */
+.uol-logo {
+    width: 278px;
+    height: 70px;
+    background: url("../images/uol-sprite.png");
+    float: left;
+}
+
+.nwe-logo {
+    float: right;
+    /*position: fixed;*/
+    bottom: 10px;
+    right: 10px;
+    max-width: 150px;
+    height: inherit;
+    width: 48%;
+}
+
+.joaquin-logo {
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    /*right: 10px;*/
+    width: 48%;
+}
+
+@media screen and (max-width: 767px) {
+    .uol-logo {
+        background-position: left -68px;
+    }
+}
+

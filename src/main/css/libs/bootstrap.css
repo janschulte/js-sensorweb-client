@@ -3458,7 +3458,7 @@ input[type="button"].btn-block {
 }
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 27px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
@@ -3632,8 +3632,8 @@ input[type="button"].btn-block {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 .navbar-btn.btn-sm {
   margin-top: 10px;

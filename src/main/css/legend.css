@@ -98,3 +98,32 @@
     width: 50px;
     margin: 5px;
 }
+.legend .header {
+    font-size: 24px;
+    /*background: pink;*/
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.legend .content {
+    height: 100%;
+    /*background: pink;*/
+    margin: -50px 0 -105px;
+    padding: 50px 0 105px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*background: yellow;*/
+}
+
+.legend-entry {
+    overflow:auto;
+    height:100%;
+}
+
+.legend .footer {
+    /*background: grey;*/
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
