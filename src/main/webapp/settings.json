@@ -1,9 +1,13 @@
 {
-    "tileLayerUrl": "http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg",
-    "tileLayerOptions": {
-        "attribution": "&copy; <a href=\"http://www.mapquest.com/\" target=\"_blank\">MapQuest</a> <img src=\"http://developer.mapquest.com/content/osm/mq_logo.png\"/>"
+    "providerBlackList": [],
+    "restApiUrls": {
+        "http://sosrest.irceline.be/api/v1/": "irceline",
+        "http://www57.lamp.le.ac.uk/52n-sos-webapp/api/v1/": "uol",
+        "http://sensors.geonovum.nl/sos/api/v1/": "geonovum"
     },
-    "selectedLineWidth" : 4,
-    "commonLineWidth" : 1,
-    "colorList": ["#000000", "#FFFFFF"]    
+    "defaultProvider": {
+        "serviceID": "1",
+        "apiUrl": "http://www57.lamp.le.ac.uk/52n-sos-webapp/api/v1/"
+    },
+    "additionalParameters": []
 }
